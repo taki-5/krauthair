@@ -200,12 +200,21 @@ body.nav-open .site-header::before {
 }
 
 .hamburger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin: -12px -6px -12px 0;
+}
+
+.hamburger-box {
   position: relative;
   width: 32px;
   height: 20px;
 }
 
-.hamburger span {
+.hamburger-box span {
   position: absolute;
   left: 0;
   width: 100%;
@@ -214,18 +223,18 @@ body.nav-open .site-header::before {
   transition: transform 0.4s var(--ease-soft), opacity 0.3s var(--ease-soft), top 0.4s var(--ease-soft);
 }
 
-.hamburger span:nth-child(1) { top: 2px; }
-.hamburger span:nth-child(2) { top: 10px; }
-.hamburger span:nth-child(3) { top: 18px; }
+.hamburger-box span:nth-child(1) { top: 2px; }
+.hamburger-box span:nth-child(2) { top: 10px; }
+.hamburger-box span:nth-child(3) { top: 18px; }
 
-body.nav-open .hamburger span:nth-child(1) {
+body.nav-open .hamburger-box span:nth-child(1) {
   top: 10px;
   transform: rotate(45deg);
 }
-body.nav-open .hamburger span:nth-child(2) {
+body.nav-open .hamburger-box span:nth-child(2) {
   opacity: 0;
 }
-body.nav-open .hamburger span:nth-child(3) {
+body.nav-open .hamburger-box span:nth-child(3) {
   top: 10px;
   transform: rotate(-45deg);
 }
@@ -372,6 +381,7 @@ body.nav-open .nav-overlay {
   letter-spacing: 0.16em;
   line-height: 1.7;
   color: rgba(232, 222, 208, 0.72);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
   margin-bottom: var(--space-2);
   opacity: 0;
   transform: translateY(14px);
@@ -396,7 +406,7 @@ body.nav-open .nav-overlay {
   letter-spacing: 0.04em;
   color: var(--color-white);
   margin: 0 0 var(--space-3);
-  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.3), 0 1px 3px rgba(0, 0, 0, 0.25);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.45), 0 4px 24px rgba(0, 0, 0, 0.3);
   word-break: keep-all;
   overflow-wrap: break-word;
   opacity: 0;
@@ -409,7 +419,7 @@ body.nav-open .nav-overlay {
   letter-spacing: 0.03em;
   line-height: 1.95;
   color: rgba(237, 229, 217, 0.92);
-  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5), 0 2px 16px rgba(0, 0, 0, 0.35);
   word-break: keep-all;
   overflow-wrap: break-word;
   margin: 0 0 var(--space-4);
@@ -1068,7 +1078,7 @@ body.loaded .hero-scroll-cue {
   line-height: 1.95;
   letter-spacing: 0.02em;
   color: rgba(237, 229, 217, 0.9);
-  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.35);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5), 0 2px 14px rgba(0, 0, 0, 0.35);
   word-break: keep-all;
   overflow-wrap: break-word;
   max-width: 34ch;
